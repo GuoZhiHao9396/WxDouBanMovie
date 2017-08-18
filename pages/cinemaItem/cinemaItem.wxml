@@ -1,0 +1,38 @@
+<template name="cinemaItem">
+<block wx:for="{{cinemas}}" wx:key="index" wx:for-item="cItem"> 
+  <view class="display flex-direction-column  background-color-white cinemadetails-bg">
+  	<!-- 影院名称、最低价 -->
+  	<view class="display flex-direction-row align-items-baseline">
+  		<view class="fs28 cinema-name">
+  			{{cItem.name}}
+	  	</view>
+  		<view class="display flex-direction-row align-items-baseline fc-red min-money">
+  			<view class="fs26">{{cItem.minmoney}}</view>
+  			<view class="fs18">元起</view>
+  		</view>
+  	</view>
+  	<!-- 影院地址 -->
+  	<view class="display flex-direction-row fs24 cinema-address-bg">
+  		<view class="cinema-address">{{cItem.address}}</view>
+	  	<view>{{cItem.distance}}km</view>
+  	</view>
+	  <!-- 服务 -->
+  	<view class="display flex-direction-row fs22 text-align-center" style="margin-top:15rpx;">
+	  	<block wx:for="{{cItem.state}}">
+	 	  	<view class="{{item.statenumber ? 'green':'orange'}}">
+		  		{{item.statename}}
+	  		</view>
+	  		<view style="width:8rpx"/>
+	  	</block>
+  	</view>
+  	<!-- 会员卡 -->
+    <block wx:if="{{cItem.vip!=''}}">
+  	<view class="display flex-direction-row fs22 align-items-center vip-bg">
+	  	<view class="violet">卡</view>
+	  	<view style="margin-left:5rpx;line-height:22rpx;">{{cItem.vip}}</view>
+   	</view>
+    </block>
+  </view>	
+  <view class="h-line" style="margin-left:20rpx"/>
+ </block>
+</template>

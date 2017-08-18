@@ -1,0 +1,47 @@
+<view class="display flex-direction-column background-color-main fs28">
+  <view class="h-line" />
+  <!-- 头部 -->
+  <view class="display flex-direction-row background-color-white title-movie">
+    <!-- 城市 -->
+    <view class="display flex-direction-row location-movie align-items-center justify-content-center">
+      {{city}}
+      <image src="../../images/ic_arrow_bottom.png" class="arrow-image-style" />
+    </view>
+    <view class="display flex-direction-row navigation-movie align-items-center justify-content-center fs26">
+      <!-- 热映 -->
+      <view class="display flex-direction-column navigation-item" bindtap="navigationChanges01">
+        <view class="{{navigationSelect ? 'navigation-item-tv-select' :'navigation-item-tv'}} text-align-center ">热映</view>
+        <view class="navigation-select {{navigationSelect ? 'theme-color-red' : 'theme-color-transparency'}}" />
+      </view>
+      <view style="width:80rpx" />
+      <!-- 待映 -->
+      <view class="display flex-direction-column navigation-item" bindtap="navigationChanges02">
+        <view class="{{navigationSelect ? 'navigation-item-tv' :'navigation-item-tv-select'}} text-align-center ">待映</view>
+        <view class="navigation-select {{navigationSelect ? 'theme-color-transparency' : 'theme-color-red'}}" />
+      </view>
+    </view>
+    <!-- 搜索 -->
+    <view class="display flex-direction-row search-movie align-items-center justify-content-center">
+      <image src="../../images/ic_search.png" class="search-image-style" />
+    </view>
+  </view>
+  <view class="h-line" />
+  <!-- 列表 -->
+  <import src="../movieItem/movieItem.wxml" />
+  <template is="movieItem" data="{{subjects}}" />
+
+  <!-- 底部加载 -->
+  <block wx:if="{{showBottomLoading}}">
+    <view class="display flex-direction-row align-items-center justify-content-center background-color-white bottom-loading fs26">
+      <image src="../../images/ic_loading.gif" class="bottom-loading-image" />
+      <view>加载中...</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="display flex-direction-row align-items-center justify-content-center background-color-white bottom-loading fs26">
+      <view>没有更多内容了</view>
+    </view>
+  </block>
+</view>
+<!-- 中间部分 -->
+<loading wx:if="{{showLoading}}">加载中...</loading>

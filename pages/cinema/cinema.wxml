@@ -1,0 +1,22 @@
+<view class="display flex-direction-column background-color-main fs28">
+  <view class="h-line" />
+  <!-- 头部 -->
+  <view class="display flex-direction-row background-color-white title-movie">
+    <!-- 城市 -->
+    <view class="display flex-direction-row location-movie align-items-center justify-content-center">
+      {{city}}
+      <image src="../../images/ic_arrow_bottom.png" class="arrow-image-style" />
+    </view>
+    <view class="display flex-direction-row search-cinema-movie align-items-center justify-content-center fs26">
+      <!-- 找影院 -->
+      <view class="display flex-direction-row align-items-center justify-content-center search-bg">
+        <image src="../../images/ic_cinema_search.png" class="arrow-image-style"/>
+        <view style="color:#C0C0C0;">找影院</view>
+      </view>
+    </view>
+  </view>
+  <view class="h-line" />
+  <!-- 列表 -->
+  <import src="../cinemaItem/cinemaItem.wxml" />
+  <template is="cinemaItem" data="{{cinemas}}" />
+</view>

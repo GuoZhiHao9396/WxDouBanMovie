@@ -1,0 +1,47 @@
+.cinemadetails-bg{
+	padding-left:20rpx;
+	padding-right:20rpx;
+	padding-top:30rpx;
+	padding-bottom:30rpx;
+}
+.cinema-address-bg{
+	margin-top:15rpx;
+	color:#C0C0C0;
+}
+.cinema-name{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.cinema-address{
+	text-overflow: ellipsis;
+	overflow: hidden;
+  margin-right: 10rpx;
+	white-space: nowrap;
+}
+.min-money{
+	width:180rpx;
+}
+.green{
+	border:2rpx solid #2E908E;
+	border-radius:5rpx;
+	padding:3rpx;
+	color:#2E908E;
+}
+.orange{
+	border:2rpx solid #D89808;
+	border-radius:5rpx;
+	padding:3rpx;
+	color:#D89808;
+}
+.violet{
+	border:2rpx solid #7C43DE;
+	border-radius:5rpx;
+	background:#7C43DE;
+	color:#ffffff;
+	padding:3rpx;
+}
+.vip-bg{
+	margin-top:15rpx;
+	color:#C0C0C0;
+}

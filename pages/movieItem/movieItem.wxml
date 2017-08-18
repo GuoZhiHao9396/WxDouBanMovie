@@ -1,0 +1,45 @@
+<template name="movieItem">
+  <block wx:for="{{subjects}}" wx:key="index">
+    <navigator url="../movieDetails/movieDetails?id={{item.id}}">
+      <view class="display flex-direction-column background-color-white">
+        <view class="display flex-direction-row movie-item-style">
+          <view class="movie-item-image">
+            <image src="{{item.images.large}}" class="movie-item-image-ad"/>
+            <image src="../../images/ic_movie_play.png" class="movie-item-image-play" />
+          </view>
+          <view class="display flex-direction-column justify-content-center fs32 movie-item-content">
+            <view class="movie-item-content-tv">{{item.title}}</view>
+            <view class="display flex-direction-row movie-item-content-tv fs24">
+              <view>类型:</view>
+              <view wx:for="{{item.genres}}" wx:for-item="g" wx:key="index">
+                <view wx:if="{{item.genres.length-1==index}}">
+                  {{g}}
+                </view>
+                <view wx:else>
+                  {{g}},
+                </view>
+              </view>
+            </view>
+            <view class="display flex-direction-row movie-item-content-tv fs24">
+              <view>主演:</view>
+              <view wx:for="{{item.casts}}" wx:for-item="c" wx:key="index">
+                <view wx:if="{{item.casts.length-1==index}}">
+                  {{c.name}}
+                </view>
+                <view wx:else>
+                  {{c.name}},
+                </view>
+              </view>
+            </view>
+            <view class="movie-item-content-tv fs22">{{item.collect_count}}人想看</view>
+          </view>
+          <view class="display flex-direction-row align-items-baseline fs32 movie-item-average">
+            <view> {{item.rating.average}}</view>
+            <view class="movie-item-score fs20">分</view>
+          </view>
+        </view>
+        <view class="h-line" style="margin-left: 20rpx;width:730rpx;" />
+      </view>
+    </navigator>
+  </block>
+</template>

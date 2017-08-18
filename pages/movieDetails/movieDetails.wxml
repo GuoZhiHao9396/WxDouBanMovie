@@ -1,0 +1,58 @@
+<view class="display flex-direction-column background-color-main fs28">
+  <!-- 头部图片信息 -->
+  <view>
+    <!-- 背景高斯模糊图 -->
+    <image src="{{movieDetail.images.large}}" class="blur" />
+    <view class="display flex-direction-column info">
+      <!-- 图片信息 -->
+      <view class="display flex-direction-row fc-white fs32 image-info-height">
+        <image src="{{movieDetail.images.large}}" class="movie-ad-image" />
+        <view class="display flex-direction-column">
+          <view class="movie-title">{{movieDetail.title}}</view>
+          <view class="movie-wish-count">{{movieDetail.wish_count}}人想看</view>
+          <view class="movie-type fs26">类型：{{movieDetail.genres}}</view>
+          <view class="movie-countries fs26">国家：{{movieDetail.countries}}</view>
+        </view>
+      </view>
+      <!-- 想看/评分 -->
+      <view class="display flex-direction-row fc-white want-see-and-grade">
+        <view class="display flex-direction-row justify-content-center align-items-center want-see-and-grade-bg" >
+          <image src="../../images/ic_want_see.png" class="want-see-and-grade-img" />
+          <view>想看</view>
+        </view>
+        <view style="width:30rpx;" />
+        <view class="display flex-direction-row justify-content-center align-items-center want-see-and-grade-bg">
+          <image src="../../images/ic_grade.png" class="want-see-and-grade-img" />
+          <view>评分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 简介内容 -->
+  <view class="display flex-direction-column align-items-center background-color-white intro-bg">
+    <text class="intro-content fs30 {{hideText ? 'show-content-line-clamp' : ''}}">{{movieDetail.summary}}</text>
+    <image src="{{imageArrow}}" class="image-arrow" bindtap="toggleText" />
+  </view>
+  <view class="h-line" />
+  <!-- 演职人员 -->
+  <view class="h-line h-line-margin-top"/>
+  <view class="display flex-direction-column background-color-white">
+    <view class="fs30 actor-tv">演职人员</view>
+    <scroll-view scroll-x class="scrollview">
+      <block wx:for="{{movieDetail.directors}}" wx:key="index">
+        <view class="actor-item">
+          <image src="{{item.avatars.large}}" class="actor-image"/>
+          <view class="fs26" class="actor-name">{{item.name}}</view>
+        </view>
+      </block>
+      <block wx:for="{{movieDetail.casts}}" wx:key="index">
+        <view class="actor-item">
+          <image src="{{item.avatars.large}}" class="actor-image"/>
+          <view class="fs26" class="actor-name">{{item.name}}</view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+<loading wx:if="{{showLoading}}">加载中...</loading>

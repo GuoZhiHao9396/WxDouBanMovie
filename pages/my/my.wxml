@@ -1,0 +1,40 @@
+<view class="display flex-direction-column background-color-main fs28">
+	
+	<view class="display flex-direction-column background-color-white item-bg">
+		<view class="h-line"/>
+		<view class="display flex-direction-row align-items-center item">
+			<view class="item-tv">我的订单</view>
+			<image src="../../images/ic_arrow_right.png" class="item-img"/>
+		</view>
+		<view class="h-line h-line-margin-left"/>
+		<view class="display flex-direction-row align-items-center item">
+			<view class="item-tv">优惠券</view>
+			<image src="../../images/ic_arrow_right.png" class="item-img"/>
+		</view>
+		<view class="h-line h-line-margin-left"/>
+		<view class="display flex-direction-row align-items-center item">
+			<view class="item-tv">影院会员卡</view>
+			<image src="../../images/ic_arrow_right.png" class="item-img"/>
+		</view>
+		<view class="h-line"/>
+	</view>
+
+	<view class="display flex-direction-column background-color-white item-bg"> 
+		<view class="h-line"/>
+		<view class="display flex-direction-row align-items-center item">
+			<view class="item-tv">想看的电影</view>
+			<image src="../../images/ic_arrow_right.png" class="item-img"/>
+		</view>
+		<view class="h-line h-line-margin-left"/>
+		<view class="display flex-direction-row align-items-center item">
+			<view class="item-tv">看过的电影</view>
+			<image src="../../images/ic_arrow_right.png" class="item-img"/>
+		</view>
+		<view class="h-line"/>
+	</view>
+
+	<view class="display flex-direction-row fs24 coyp">
+        <view>©猫眼电影 客服电话：</view>
+        <view class="phone" bindtap="tapPhone">1010-5335</view>
+	</view>
+</view>

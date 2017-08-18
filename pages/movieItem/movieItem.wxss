@@ -1,0 +1,36 @@
+.movie-item-style{
+	padding: 20rpx;
+}
+.movie-item-image{
+	width:150rpx;
+	height:200rpx;
+}
+.movie-item-image-ad{
+	width:100%;
+	height:100%;
+}
+.movie-item-image-play{
+	width:65rpx;
+	height: 65rpx;
+	position:relative;
+	top:-140rpx;
+	left: 45rpx
+}
+.movie-item-content{
+	width:470rpx;
+	height:200rpx;
+	margin-left: 20rpx;
+}
+.movie-item-content-tv{
+	line-height: 50rpx;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.movie-item-average{
+	width:40rpx;
+	color:#ED8E0D;
+}
+.movie-item-score{
+	margin-left: 5rpx;
+}

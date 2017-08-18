@@ -1,0 +1,13 @@
+@import "../movie/movie.wxss";
+@import "../movieItem/movieItem.wxss";
+@import "../cinemaItem/cinemaItem.wxss";
+.search-bg{
+	width:100%;
+	padding:5rpx;
+	border-radius: 10rpx;
+	border: 1rpx solid #C0C0C0;
+}
+.search-cinema-movie {
+	width:600rpx;
+    font-weight:bold;
+}

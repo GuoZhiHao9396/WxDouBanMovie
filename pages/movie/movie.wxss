@@ -1,0 +1,68 @@
+@import "../movieItem/movieItem.wxss";
+
+page {
+  height: 100%;
+  background-color: #f7f7fa;
+}
+
+.location-movie {
+  width: 120rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 25rpx;
+}
+
+.navigation-movie {
+  width: 550rpx;
+  font-weight: bold;
+}
+
+.search-movie {
+  width: 90rpx;
+  border-left: 1rpx solid #dfdfdf;
+}
+
+.arrow-image-style {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.search-image-style {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.title-movie {
+  height: 90rpx;
+}
+
+.navigation-select {
+  width: 100%;
+  height: 1rpx;
+}
+
+.navigation-item-tv {
+  height: 85rpx;
+  line-height: 85rpx;
+}
+
+.navigation-item-tv-select {
+  height: 85rpx;
+  line-height: 85rpx;
+  color: #d81e06;
+}
+
+.navigation-item {
+  width: 70rpx;
+  height: 90rpx;
+}
+
+.bottom-loading {
+  padding: 50rpx;
+}
+
+.bottom-loading-image {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
